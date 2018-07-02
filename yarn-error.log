@@ -1,0 +1,79 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Dtuck\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Dtuck\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\nodejs;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Yarn\bin;C:\Users\Dtuck\AppData\Local\Microsoft\WindowsApps;C:\Users\Dtuck\AppData\Local\atom\bin;C:\Users\Dtuck\AppData\Local\Microsoft\WindowsApps;C:\Program Files(x86)\Mono\bin;C:\MAMP\bin\mysql\bin;C:\Users\Dtuck\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\Dtuck\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  9.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Dtuck\desktop\projects\prolaera\prolaera-certificate\package.json: Unexpected token } in JSON at position 494
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "@prolaera/prolaeraemailtemplates",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "author": "Drew Tucker",
+    "license": "MIT",
+    "scripts": {
+      "build": "babel src -d lib",
+      "precommit": "pretty-quick src --staged",
+      "test": "jest src --runInBand"
+    },
+    "dependencies": {
+      "babel-runtime": "^6.26.0",
+      "dompurify": "^1.0.4",
+      "jsdom": "^11.11.0",
+      "moment": "^2.22.2",
+      "probe-image-size": "^4.0.0",
+      "react": "^16.4.0",
+      "react-dom": "^16.4.0",
+    },
+    "devDependencies": {
+      "babel-cli": "^6.0.0",
+      "babel-jest": "^23.0.1",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-env": "^1.7.0",
+      "babel-preset-react": "^6.24.1",
+      "enzyme": "^3.3.0",
+      "enzyme-adapter-react-16": "^1.1.1",
+      "husky": "^0.14.3",
+      "jest": "^23.1.0",
+      "prettier": "^1.13.4",
+      "pretty-quick": "^1.6.0",
+      "react-test-renderer": "^16.4.0"
+    },
+    "description": "Email service for prolaera.com",
+    "directories": {
+      "lib": "lib"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/drewtucker/prolaera-certificate.git"
+    },
+    "bugs": {
+      "url": "https://github.com/drewtucker/prolaera-certificate.git/issues"
+    },
+    "homepage": "https://github.com/drewtucker/prolaera-certificate#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
