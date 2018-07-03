@@ -10,15 +10,22 @@
     "test": "jest src --runInBand"
   },
   "dependencies": {
+    "@react-pdf/core": "^0.7.6",
+    "@react-pdf/dom": "^0.7.6",
+    "@react-pdf/node": "^0.7.6",
+    "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "dompurify": "^1.0.4",
     "http-server": "^0.11.1",
     "jsdom": "^11.11.0",
     "moment": "^2.22.2",
     "probe-image-size": "^4.0.0",
-    "react": "^16.4.0",
+    "react": "^16.4.1",
     "react-dom": "^16.4.0",
-    "webpack": "^4.14.0"
+    "regenerator-runtime": "^0.12.0",
+    "webpack": "^4.14.0",
+    "yoga-layout": "github:naminho/yoga-layout-windows",
+    "yoga-layout-windows": "^1.9.3"
   },
   "devDependencies": {
     "babel-cli": "^6.0.0",
