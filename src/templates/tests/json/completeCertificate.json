@@ -1,0 +1,29 @@
+{
+  "active": true,
+  "addressOne": "444 Castro St",
+  "addressTwo": "Suite 1200",
+  "archived": false,
+  "city": "Mountain View",
+  "company_id": 222222,
+  "logoUrl":
+    "https://prolaera.s3-us-west-2.amazonaws.com/sponsors/def4c2bf-0485-4eda-9b2b-0e4055ef0dbe.logo.png",
+  "name": "BowmanKnopp",
+  "signature": {
+    "imageUrl":
+      "https://prolaera.s3-us-west-2.amazonaws.com/sponsors/def4c2bf-0485-4eda-9b2b-0e4055ef0dbe.signature.jpg",
+    "name": "Jane Doe",
+    "title": "Director, Learning & Development"
+  },
+  "sponsor_id": "def4c2bf-0485-4eda-9b2b-0e4055ef0dbe",
+  "sponsors": {
+    "name": "BowmanKnopp",
+    "nationalRegistry": "123456",
+    "qas": "123456",
+    "texas": "123456"
+  },
+  "sponsorStatement":
+    "In accordance with the standards of the National Registry of CPE Sponsors and as set forth in Circular 230 Section 10.6, credits have been granted based on a 50-minute hour. State boards of accountancy, state bars, and other state regulatory bodies have final authority on the acceptance of courses for continuing education credit. Please check with your state board regarding applicability of this course towards your continuing education requirement.",
+  "state": "California",
+  "style": "portrait",
+  "zip": "94041"
+}
