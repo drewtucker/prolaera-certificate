@@ -1,25 +1,24 @@
 import { Image, StyleSheet, Text, View } from "@react-pdf/core";
 import React from "react";
 
-class Signature extends React.Component {
-  render() {
-    const {
-      signature: { imageUrl = "", name = "", title = "" }
-    } = this.props;
+const styles = StyleSheet.create({
+  image: { maxWidth: 250 },
+  name: { fontSize: 20 },
+  title: { fontSize: 16 }
+});
 
-    const styles = StyleSheet.create({
-      image: {},
-      subtext: {}
-    });
+const SigImage = ({ imageUrl }) => (
+  <Image src={imageUrl} style={styles.image} />
+);
+const Name = ({ name }) => <Text style={styles.name}>{name}</Text>;
+const Title = ({ title }) => <Text style={styles.title}>{title}</Text>;
 
-    return (
-      <View>
-        <Image src={signature.imageUrl} style={styles.image} />
-        <Text style={styles.subtext}>{signature.name}</Text>
-        <Text style={styles.subtext}>{signature.title}</Text>
-      </View>
-    );
-  }
-}
+const Signature = cert => (
+  <View>
+    <SigImage {...cert} />
+    <Name {...cert} />
+    <Title {...cert} />
+  </View>
+);
 
 export default Signature;

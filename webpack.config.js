@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   context: path.join(__dirname, "src"),
-  entry: ["./index.js"],
+  entry: ["babel-polyfill", "./index.js"],
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: "babel",
         exclude: /node_modules/
       },
       {

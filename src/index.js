@@ -1,10 +1,11 @@
+import { Document, Page } from "@react-pdf/core";
+import ReactPDF from "@react-pdf/node";
+import "babel-core/register";
+import "babel-polyfill";
 import React from "react";
-import { Page, Document } from "@react-pdf/core";
-import Logo from "./components/logo";
 import Address from "./components/address";
 import CertInfo from "./components/certInfo";
-import ReactPDF from "@react-pdf/node";
-import regeneratorRuntime from "regenerator-runtime";
+import Logo from "./components/logo";
 
 const Certificate = props => (
   <Page {...props}>
@@ -14,8 +15,8 @@ const Certificate = props => (
   </Page>
 );
 
-const Output = () => (
-  <Document author="Drew Tucker" title="Certificate">
+const Output = () => props => (
+  <Document author="Drew Tucker" title="Certificate" {...props} {...cert}>
     <Certificate orientation="landscape" size="A4" />
   </Document>
 );

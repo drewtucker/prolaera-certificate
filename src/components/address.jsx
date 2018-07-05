@@ -1,31 +1,36 @@
+import { StyleSheet, Text, View } from "@react-pdf/core";
 import React from "react";
-import { View, Text, StyleSheet } from "@react-pdf/core";
 
-class Address extends React.Component {
-  render() {
-    const {
-      addressOne = "",
-      addressTwo = "",
-      city = "",
-      state = "",
-      zip = ""
-    } = this.props;
-
-    const styles = StyleSheet.create({
-      wrapper: { maxWidth: "300px", height: "100px" },
-      line: { maxWidth: "100%", fontStyle: "italic" }
-    });
-
-    return (
-      <View style={styles.wrapper}>
-        <Text style={styles.line}>{addressOne}</Text>
-        <Text style={styles.line}>{addressTwo}</Text>
-        <Text style={styles.line}>
-          {city}, {state} {zip}
-        </Text>
-      </View>
-    );
+const styles = StyleSheet.create({
+  wrapper: { maxWidth: "250px", maxHeight: "100px" },
+  address: { maxWidth: "100%", textAlign: "right", fontStyle: "italic" },
+  cityStateZip: {
+    maxWidth: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+    fontStyle: "italic",
+    paddingRight: "0px"
   }
-}
+});
+
+const AddressOne = ({ addressOne }) => (
+  <Text style={styles.address}>{addressOne}</Text>
+);
+const AddressTwo = ({ addressTwo }) => (
+  <Text style={styles.address}>{addressTwo}</Text>
+);
+const CityStateZip = ({ city, state, zip }) => (
+  <Text style={styles.line}>
+    {city}, {state} {zip}{" "}
+  </Text>
+);
+
+const Address = cert => (
+  <View style={styles.wrapper} {...cert}>
+    <AddressOne {...cert} />
+    <AddressTwo {...cert} />
+    <CityStateZip {...cert} />
+  </View>
+);
 
 export default Address;

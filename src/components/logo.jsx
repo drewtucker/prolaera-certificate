@@ -1,20 +1,16 @@
+import { Image, StyleSheet, View } from "@react-pdf/core";
 import React from "react";
-import { View, Image, StyleSheet } from "@react-pdf/core";
 
-class Logo extends React.Component {
-  render() {
-    const { logoUrl } = this.props;
+const styles = StyleSheet.create({
+  image: { maxWidth: "150px", maxHeight: "50px" }
+});
 
-    const styles = StyleSheet.create({
-      image: { maxWidth: 300, height: 100 }
-    });
+const LogoUrl = ({ logoUrl }) => <Image src={logoUrl} style={styles.image} />;
 
-    return (
-      <View>
-        <Image src={logoUrl} style={styles.image} />
-      </View>
-    );
-  }
-}
+const Logo = cert => (
+  <View>
+    <LogoUrl {...cert} />
+  </View>
+);
 
 export default Logo;
