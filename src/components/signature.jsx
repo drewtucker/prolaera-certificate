@@ -2,16 +2,20 @@ import { Image, StyleSheet, Text, View } from "@react-pdf/core";
 import React from "react";
 
 const styles = StyleSheet.create({
-  image: { maxWidth: 250 },
-  name: { fontSize: 20 },
-  title: { fontSize: 16 }
+  image: { maxWidth: 200 },
+  name: { fontSize: 17 },
+  title: { fontSize: 15 }
 });
 
-const SigImage = ({ imageUrl }) => (
-  <Image src={imageUrl} style={styles.image} />
+const SigImage = ({ signature }) => (
+  <Image src={signature.imageUrl} style={styles.image} />
 );
-const Name = ({ name }) => <Text style={styles.name}>{name}</Text>;
-const Title = ({ title }) => <Text style={styles.title}>{title}</Text>;
+const Name = ({ signature }) => (
+  <Text style={styles.name}>{signature.name}</Text>
+);
+const Title = ({ signature }) => (
+  <Text style={styles.title}>{signature.title}</Text>
+);
 
 const Signature = cert => (
   <View>
