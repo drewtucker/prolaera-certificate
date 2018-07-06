@@ -14,6 +14,8 @@ const cert = {
   date: "2017-06-26T08:00:00.000Z",
   first: "Hugh",
   last: "Mann",
+  delivery_date: "2018-07-18T22:00:00.000Z",
+  delivery_method: 5,
   hours: [
     {
       subject_area: "Imported",
@@ -67,7 +69,8 @@ const styles = StyleSheet.create({
   subRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginLeft: "25px"
+    marginLeft: "45px",
+    marginRight: "45px"
   },
   certInfo: {
     marginTop: "10px",
@@ -75,9 +78,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center"
   },
-  regNums: { justifyContent: "right" },
   sponsorStatement: {
-    marginTop: "48px",
+    marginTop: "35px",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center"
@@ -100,7 +102,7 @@ const doc = (
       </View>
       <View style={styles.subRow}>
         <Signature {...cert} />
-        <RegistrationNumbers {...cert} />
+        <RegistrationNumbers style={styles.regNums} {...cert} />
       </View>
       <View style={styles.sponsorStatement}>
         <SponsorStatement {...cert} />

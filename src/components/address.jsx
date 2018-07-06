@@ -2,14 +2,18 @@ import { StyleSheet, Text, View } from "@react-pdf/core";
 import React from "react";
 
 const styles = StyleSheet.create({
-  wrapper: { maxWidth: "250px", maxHeight: "100px" },
-  address: { maxWidth: "100%", textAlign: "right", fontStyle: "italic" },
+  wrapper: { maxWidth: 250, maxHeight: 100 },
+  address: {
+    maxWidth: "100%",
+    fontSize: 15,
+    textAlign: "right",
+    fontFamily: "Helvetica-Oblique"
+  },
   cityStateZip: {
     maxWidth: "100%",
-    display: "flex",
     justifyContent: "flex-end",
-    fontStyle: "italic",
-    paddingRight: "0px"
+    fontFamily: "Helvetica-Oblique",
+    fontSize: 15
   }
 });
 
@@ -20,7 +24,7 @@ const AddressTwo = ({ addressTwo }) => (
   <Text style={styles.address}>{addressTwo}</Text>
 );
 const CityStateZip = ({ city, state, zip }) => (
-  <Text style={styles.line}>
+  <Text style={styles.cityStateZip}>
     {city}, {state} {zip}{" "}
   </Text>
 );
