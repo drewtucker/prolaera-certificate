@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     maxWidth: 600
   },
-  header: { fontSize: 30, marginBottom: 0, paddingBottom: 0 },
-  subtext: { fontSize: 15, fontStyle: "italic" },
-  name: { fontSize: 25, marginBottom: 0 },
-  subject: { fontSize: 22, textAlign: "center" },
+  header: { maxHeight: 45, fontSize: 35, marginBottom: 0, paddingBottom: 0 },
+  subtext: { marginTop: 0, fontSize: 15, fontStyle: "italic" },
+  name: { maxHeight: 30, fontSize: 25, marginBottom: 0 },
+  subject: { maxHeight: 60, fontSize: 22, textAlign: "center" },
   hours: { fontSize: 13 }
 });
 
