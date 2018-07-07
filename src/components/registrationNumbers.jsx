@@ -7,9 +7,10 @@ const styles = StyleSheet.create({
   line: { fontSize: 10 }
 });
 
+// TODO: Add dictionary for formating key names
 const Sponsors = ({ sponsors }) =>
-  Object.keys(sponsors).map((key, index) => (
-    <Text key={index} style={styles.line}>
+  Object.keys(sponsors).map(key => (
+    <Text key={key} style={styles.line}>
       {key}: {sponsors[key]}{" "}
     </Text>
   ));

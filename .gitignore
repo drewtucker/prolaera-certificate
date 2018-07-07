@@ -1,7 +1,11 @@
 node_modules
 yarn.lock
+yarn-error.log
+package-lock.json
+lib
 test.html
 .DS_Store
 templates/tests/test.html
 yarn.lock
 package.lock.json
+output.pdf

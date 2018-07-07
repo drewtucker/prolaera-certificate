@@ -1,5 +1,6 @@
 import { Document, Image, Page, StyleSheet, View } from "@react-pdf/core";
 import ReactPDF from "@react-pdf/node";
+import fs from "fs";
 import React from "react";
 import Address from "./components/address";
 import CertInfo from "./components/certInfo";
@@ -36,7 +37,7 @@ const cert = {
   signature: {
     imageUrl:
       "https://prolaera.s3-us-west-2.amazonaws.com/sponsors/def4c2bf-0485-4eda-9b2b-0e4055ef0dbe.signature.jpg",
-    name: "John Smith",
+    name: "Kimberly Washington",
     title: "Director, Learning and Development"
   },
   addressOne: "1234 Fake St.",
@@ -64,7 +65,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: "25px",
-    marginLeft: "25px"
+    marginLeft: "25px",
+    marginRight: "25px"
   },
   subRow: {
     flexDirection: "row",
@@ -86,6 +88,8 @@ const styles = StyleSheet.create({
   }
 });
 
+//TODO:
+
 const doc = (
   <Document author="Drew Tucker" title="Certificate">
     <Page size="A4" orientation="landscape" style={styles.page}>
@@ -102,7 +106,7 @@ const doc = (
       </View>
       <View style={styles.subRow}>
         <Signature {...cert} />
-        <RegistrationNumbers style={styles.regNums} {...cert} />
+        <RegistrationNumbers {...cert} />
       </View>
       <View style={styles.sponsorStatement}>
         <SponsorStatement {...cert} />
@@ -122,9 +126,23 @@ describe("ReactPDF Render", async () => {
     jest.setTimeout(30000);
     try {
       const render = await ReactPDF.render(doc, `${__dirname}/output.pdf`);
+      // const string = renderToString(doc);
+      // await writeFile(string);
       expect(render).toBe(undefined);
     } catch (error) {
       throw error;
     }
   });
 });
+
+async function writeFile(pdfHtml) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(`${__dirname}/test.html`, pdfHtml, err => {
+      if (err) {
+        console.log(err);
+        reject(err);
+      }
+      resolve(true);
+    });
+  });
+}
